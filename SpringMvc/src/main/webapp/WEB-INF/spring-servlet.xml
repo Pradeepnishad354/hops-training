@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <context:component-scan base-package="com.spring.mvc"/>
+ 
+ 
+<!--  set viewresolver -->
+  
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver " name="viewResolver">
+
+<property name="prefix" value="/WEB-INF/views/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+ 
+ 
+<!-- mongotemplate bean -->
+
+<!-- Configure the MongoTemplate bean in the applicationContext.xml file using the <mongo:template>
+ -->
+<!-- <bean class="org.springframework.data.mongodb.core.MongoTemplate" name="mongoTemplate">
+<constructor-arg name="mongoDbFactory" ref="MongoDbFactory"></constructor-arg>
+
+</bean> -->
+
+<!-- Configure the MongoDB connection settings in the applicationContext.xml file using the <mongo:client>  -->
+<!--  <bean name="mongoClient" class="com.mongodb.MongoClient">
+    <constructor-arg name="host" value="localhost" />
+    <constructor-arg name="port" value="27017" />
+</bean> -->
+
+<!-- Configure the MongoDbFactory bean in the applicationContext.xml
+ -->
+<!-- <bean name="mongoDbFactory" class="org.springframework.data.mongodb.core.SimpleMongoClientDbFactory">
+    <constructor-arg name="mongoClient" ref="mongoClient" />
+    <constructor-arg name="databaseName" value="mydatabase" />
+</bean> -->
+	
+</beans>
