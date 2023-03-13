@@ -40,7 +40,7 @@ public class ContactController {
 @RequestMapping(path="/processForm",method = RequestMethod.POST)
 public String handleForm(@ModelAttribute User user, Model model) {
 	
-	this.userService.createUser(user);
+	this.userService.add(user);
 
 	return"success";
 }

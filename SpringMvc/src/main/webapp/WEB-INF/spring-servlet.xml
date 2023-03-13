@@ -26,21 +26,18 @@
 <!-- Configure the MongoTemplate bean in the applicationContext.xml file using the <mongo:template>
  -->
 <!-- <bean class="org.springframework.data.mongodb.core.MongoTemplate" name="mongoTemplate">
-<constructor-arg name="mongoDbFactory" ref="MongoDbFactory"></constructor-arg>
+<constructor-arg name="MongoDbFactory" ref="mongoDbFactory"/>
 
 </bean> -->
 
 <!-- Configure the MongoDB connection settings in the applicationContext.xml file using the <mongo:client>  -->
-<!--  <bean name="mongoClient" class="com.mongodb.MongoClient">
-    <constructor-arg name="host" value="localhost" />
-    <constructor-arg name="port" value="27017" />
-</bean> -->
 
 <!-- Configure the MongoDbFactory bean in the applicationContext.xml
  -->
-<!-- <bean name="mongoDbFactory" class="org.springframework.data.mongodb.core.SimpleMongoClientDbFactory">
-    <constructor-arg name="mongoClient" ref="mongoClient" />
-    <constructor-arg name="databaseName" value="mydatabase" />
-</bean> -->
+<!-- <bean name="mongoDbFactory" class="org.springframework.data.mongodb.MongoDbFactory">
+    <constructor-arg name="uri" value="mongodb://localhost:27017/Student" />
+</bean>
+	 -->
+	
 	
 </beans>
