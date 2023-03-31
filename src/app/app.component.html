@@ -1,0 +1,161 @@
+<h1>Hello {{title}}</h1>
+
+<h1>{{getData(10,20)}}</h1>
+<h1>{{2+2}}</h1>
+
+<!-- <h1>{{data++}}</h1> compile error--> 
+
+<h1 class="{{title}}"> Har Har Mahadev</h1>
+    
+<!-- <app-user-list></app-user-list> -->
+
+<!-- <app-user-data></app-user-data>
+
+<app-student-list></app-student-list> -->
+
+<app-country-list></app-country-list>
+
+<app-login></app-login>
+
+<!-- make and call function -->
+<button (click)="getName()">ClickMe</button>
+<button (click)="getParam('pradeep','nishad')">ClickMe2</button>
+
+<!-- Events with input box and getValue -->
+
+<button (click)="getValue('mahadev')">Call Function</button>
+<br/><br/>
+<hr>
+
+<input type="text" #box (keyup)="getValue(box.value)" placeholder="event keyup" style="width: 310px; height: 20px;"/>
+
+<br/><br/>
+<input type="text" #b (keydown)="getValue(b.value)" placeholder="event keydown" style="width: 310px; height: 20px;"/>
+<br/><br/>
+
+<input type="text" #b1 (blur)="getValue(b1.value)" placeholder="event keyblur" style="width: 310px; height: 20px;"/>
+
+<br/><br/>
+<input type="text" #b2 (input)="getValue(b2.value)" placeholder="event input" style="width: 310px; height: 20px;"/>
+
+
+<h1 (mouseover)="getValue('hello')" >Code Step By Step</h1>
+<br/><br/>
+<h1 (mouseleave)="getValue('Pradeep')" >Mahadev</h1>
+
+<!-- get input Box value and display -->
+<input type="text" #box1 placeholder="enter your name" name="username">
+<button (click)="getValue(box1.value)">Click</button>
+<p>Box value is {{display}}</p>
+
+
+<!-- counter example -->
+
+
+<button (click)="counter('minus')">--</button>
+<p>Count :{{count}}</p>
+
+<button (click)="counter('add')">++</button>
+
+<!-- property binding -->
+ <!-- interpolation -->
+ <br/><br/>
+<input type="text" name="user-name" value="{{name}}" disabled="{{disable}}">
+
+<!-- property binding -->
+<input type="text" name="user-name" [value]="name" [disabled]=disable>
+
+
+<app-signin></app-signin>
+
+
+<!-- if-else -->
+
+<!-- <h1 *ngIf="show else elseBlock ">Code Step by step</h1> -->
+
+<hr>
+<h1 *ngIf="show=='yes'; then ifBlock else elseBlock "></h1>
+<ng-template #ifBlock>
+<h1>har har mahadev</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>Else Condition</h1>
+</ng-template>
+<ng-template [ngIf]="color==='red' ">
+<h1 style="color:red">Red color</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='red' ">
+    <h1 style="color:orange">Orange color</h1>
+    </ng-template>
+
+    <ng-template [ngIf]="color==='green' ">
+        <h1 style="color:green">Green color</h1>
+        </ng-template>
+<!-- pipes -->
+<hr>
+
+<h1>{{title1|uppercase}}</h1>
+<h1>{{title1|lowercase}}</h1>
+<h1>{{title1}}</h1>
+
+<h1>{{today|date}}</h1>
+
+
+<h1>{{capString(title1)}}</h1>
+
+<!-- advance about pipe -->
+
+<h1>{{user|json}}</h1>
+
+<h2>{{2.3|number:'3.3-5'}}</h2>
+
+<h1>{{20|currency:'INR'}}</h1>
+
+<h3>{{"hello how are you"|titlecase}}</h3>
+
+
+<!-- custom pipe use and update -->
+
+<h1>{{10|usdInr:200}}</h1>
+
+
+<!-- onchange hook -->
+<h1>LifeCycle Hook|onChanges</h1>
+<app-child-cmp d={{d}}></app-child-cmp>
+
+<button (click)="updateData()">change</button>
+
+
+
+
+<!-- switch case -->
+ <h1>{{switch}}</h1> 
+
+<div [ngSwitch]="color2">
+
+    <h1 style="color: red;"  *ngSwitchCase="'red'">Red Color</h1>
+    <h1 style="color: blue;"  *ngSwitchCase="'blue'">blue Color</h1>
+    <h1 style="color: pink;"  *ngSwitchCase="'pink'">Pink Color</h1>
+
+    <h1   *ngSwitchDefault>No Color</h1>
+</div> 
+
+
+<!-- loops  -->
+
+<h1 *ngFor="let item of users">{{item}}</h1>
+
+<h1 *ngFor="let a of userDetails"> {{a.name}} {{a.email}} {{a.mob}}</h1>
+
+<!-- nested for loop -->
+
+
+
+ <ul *ngFor="let a of user1"> 
+<h1>{{a.name}}</h1>
+<ul *ngFor="let ac of a.Account">
+<li>{{ac}}</li>
+
+</ul>
+</ul>
