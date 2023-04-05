@@ -1,0 +1,12 @@
+"use strict";
+// let a:string|number|undefined=10;
+// let b:string|number|undefined=30;
+// let c:string|number|undefined=60;
+// let d:string|number|undefined=20;
+let a = 10;
+let b = 30;
+let c = 60;
+let d = 20;
+console.warn(a);
+console.warn(b);
+console.warn(c);
