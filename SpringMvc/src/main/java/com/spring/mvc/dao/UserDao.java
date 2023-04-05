@@ -1,6 +1,8 @@
 package com.spring.mvc.dao;
 
-import org.springframework.stereotype.Repository;
+import java.util.List;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.spring.mvc.model.User;
 
@@ -24,4 +26,11 @@ public interface UserDao {
 	
 	
 	public void add(User user);
+	
+//	public List<User> getAllData();
+	
+	public void delete(String id);
+	
+	public List<org.bson.Document> findAllUser();
+	
 }

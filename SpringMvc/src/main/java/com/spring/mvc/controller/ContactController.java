@@ -1,5 +1,8 @@
 package com.spring.mvc.controller;
 
+import java.util.List;
+
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,7 +47,66 @@ public String handleForm(@ModelAttribute User user, Model model) {
 
 	return"success";
 }
+
+
+@RequestMapping("/list")
+public String listUser(Model model) {
+	
+	List<Document> users=userService.findAllUsers();
+	
+	model.addAttribute("user",users);
+	
+	return"list";
+	
 }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // use @requestparam...............

@@ -37,6 +37,10 @@
   <input type="password" class="form-control"  name="password" id="password" placeholder="enter password">
 </div>
 
+<div class="mb-3">
+  <label for="userName" class="form-label">City</label>
+  <input type="text" class="form-control"  name="city" id="city" placeholder="enter here ">
+</div>
 <div class="container text-center"><button type="submit" class="btn btn-success">Signup</button>
 </div>
 </form>

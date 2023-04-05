@@ -1,5 +1,8 @@
 package com.spring.mvc.service;
 
+import java.util.List;
+
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +18,12 @@ public class UserServiceImpl implements UserService {
 	public void add(User user) {
 		
 		userDao.add(user);
+	}
+
+	public List<Document> findAllUsers() {
+		
+		return userDao.findAllUser();
+		
 	}
 	
 	

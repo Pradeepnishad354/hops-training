@@ -1,25 +1,26 @@
 package com.spring.mvc.model;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+
 
 //@Document(collection = "user")
 public class User {
 
+	
 	@Id
-	private int id;
-	public int getId() {
+	private String id;
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
 	private String email;
 	private String name;
 	private String password;
-
+  private String city;
 	public String getEmail() {
 		return email;
 	}
@@ -43,5 +44,31 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	
+	
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public User(String id, String email, String name, String password, String city) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.name = name;
+		this.password = password;
+		this.city = city;
+	}
+
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 
 }
