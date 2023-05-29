@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.user.model.User;
-import com.user.repo.UserRepository;
 import com.user.service.UserService;
 
 
@@ -25,9 +24,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired
-	private UserRepository userRepository;
-
+	
 	@GetMapping("/home")
 	public String homePage() {
 
