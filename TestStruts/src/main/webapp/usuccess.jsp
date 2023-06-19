@@ -10,6 +10,6 @@
 
 <%@ taglib prefix="s" uri="/struts-tags" %>
 Record updated successfully......
-
+<a  href="student">ListStudent</a>
 </body>
 </html>

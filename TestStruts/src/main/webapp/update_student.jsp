@@ -80,7 +80,7 @@ a {
 <s:textfield  placeholder="Enter your name" value="%{#application.b}" name="s.name" /><br>
 
 <label for="age" ><b>Age</b></label>
-<s:textfield  placeholder="Enter your age" value="%{#application.a}" name="s.age" /><br>
+<s:textfield  placeholder="Enter your age" value="%{#application.c}" name="s.age" /><br>
 
 <label for="email" ><b>Email</b></label>
 <s:textfield  placeholder="Enter your email" value="%{#application.d}" name="s.email" /><br>
