@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.container{
+background-color: pink;
+border: black solid;
+width: 40%;
+
+
+
+}
+h4{
+
+    background-color: rgb(204, 240, 204);
+    border: solid black 1px;
+    width: 10%;
+}
+
+button{
+
+    background-color: green;
+    width: 7%;
+    color: white;
+
+}
+
+.pagination{
+
+    display: inline-block;
+}
+
+.pagination button{
+
+background-color: rgb(64, 175, 64);
+border: 1px solid #ddd;
+color: black;
+
+padding: 8px 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+.pagination button.active{
+
+
+
+    background-color: greenyellow;
+    color: white;
+}
+</style>
+
+
+</head>
+<body>
+    <h4>Dom Example</h4>
+
+<div class="container">
+<ul id="list">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+<li>Item 4</li>
+</ul>
+
+
+    </div>
+
+<div class="pagination"></div>
+
+
+<button onclick="createItem()">CreateItem</button>
+<button onclick="updateItem()">UpdateItem</button>
+<button onclick="deleteItem()">DeleteItem</button>
+
+
+<script src="JS/crud.js"></script>
+</body>
+</html>
